@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #0AEAFA;" stylesheets="@../../resources/estilo_myspa.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="org.utl.examen.gui.BibliotecaController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="600.0" prefWidth="397.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="161.0" layoutY="19.0" styleClass="tlogin" text="Detalle Libro" />
+                  <Label layoutX="20.0" layoutY="131.0" prefHeight="19.0" prefWidth="95.0" styleClass="titulo1" text="Titulo:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="131.0" />
+                  <Label layoutX="20.0" layoutY="164.0" styleClass="titulo1" text="Autor(es):" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="164.0" />
+                  <Label layoutX="20.0" layoutY="241.0" styleClass="titulo1" text="Fecha de Publicación:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="241.0" />
+                  <Label layoutX="20.0" layoutY="281.0" styleClass="titulo1" text="Número de Páginas:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="281.0" />
+                  <Label layoutX="20.0" layoutY="204.0" styleClass="titulo1" text="Editorial:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="204.0" />
+                  <JFXTextField fx:id="txtTitulo" layoutX="116.0" layoutY="117.0" prefHeight="25.0" prefWidth="264.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="117.0" />
+                  <JFXTextField fx:id="txtAutor" layoutX="116.0" layoutY="152.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="70.0" />
+                  <JFXTextField fx:id="txtFecha" layoutX="185.0" layoutY="229.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="70.0" />
+                  <JFXTextField fx:id="txtNumPag" layoutX="185.0" layoutY="269.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="70.0" />
+                  <JFXTextField fx:id="txtEditorial" layoutX="116.0" layoutY="191.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="70.0" />
+                  <Button fx:id="btnSave" layoutX="170.0" layoutY="370.0" mnemonicParsing="false" styleClass="btn-primary" text="Guardar">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SAVE" />
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="75.0" fitWidth="84.0" layoutX="17.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/580b585b2edbce24c47b276e.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView layoutX="7.0" layoutY="106.0" prefHeight="366.0" prefWidth="434.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="106.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="colTitulo" prefWidth="75.0" text="Titulo" />
+                        <TableColumn fx:id="colAutor" prefWidth="75.0" text="Autor(es)" />
+                        <TableColumn fx:id="colEditorial" prefWidth="75.0" text="Editorial" />
+                        <TableColumn fx:id="colNumPag" prefWidth="116.7777099609375" text="Número de Páginas" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="149.0" layoutY="19.0" styleClass="tlogin" text="Catálogo Libros" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
